@@ -28,6 +28,10 @@ const Card = ({ name }: CardProps): React.ReactElement => {
       Pochacco themed of course. I'm soso grateful for the friendship we've built over the year (I think it's been a year) and here's to many more!! \
       I hope you had a christmas full of food, warmth, and joyful times with loved ones that'll continue into the new year too!";
 
+  const wendellText =
+    "Merry Christmas and Happy New Year! No I am not a day late, new years has not arrived just yet. \
+    It's been a chaotic year with all of you and I'm etenerally grateful to have met you and become friends.";
+
   if (name == "diana" || name == "Diana") {
     paragraph = dianaText;
     name = name.charAt(0).toUpperCase() + name.slice(1);
