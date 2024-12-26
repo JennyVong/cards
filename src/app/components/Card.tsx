@@ -1,6 +1,5 @@
 "use client";
-import React, { ChangeEvent } from "react";
-import { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../styles/classicStyles.module.css";
 import Pochacco from "../assets/pochacco.svg";
