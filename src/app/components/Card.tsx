@@ -20,8 +20,20 @@ const Card = ({ name }: CardProps): React.ReactElement => {
             built through ss and so glad that we can celebrate christmas/new \
             years in this little online way LOL to many more years of friendship \
             and pochaccos!!!";
+
+  const samText =
+    "WAAHAA I hope you had a wonderful christmas Sam!! Happy New Years too! \
+      haha I planned to have this done before Christmas but last minute dinner plans got in the way but alas it is here hehe \
+      As a little token of appreciation and to celebrate the holidays with you I present this e-card LOL \
+      Pochacco themed of course. I'm soso grateful for the friendship we've built over the year (I think it's been a year) and here's to many more!! \
+      I hope you had a christmas full of food, warmth, and joyful times with loved ones that'll continue into the new year too!";
+
   if (name == "diana" || name == "Diana") {
     paragraph = dianaText;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  if (name == "sam" || name == "Sam") {
+    paragraph = samText;
     name = name.charAt(0).toUpperCase() + name.slice(1);
   }
   return (
