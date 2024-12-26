@@ -99,6 +99,10 @@
   margin-top: 10px;
 }
 
+/**
+  name input field styles
+*/
+
 .form {
   margin-bottom: 20px;
   text-align: center;
@@ -117,6 +121,7 @@
   border-radius: 5px;
   margin-top: 10px;
   margin-right: 10px;
+  color: #000;
 }
 
 .button {
