@@ -40,6 +40,10 @@ const Card = ({ name }: CardProps): React.ReactElement => {
     paragraph = samText;
     name = name.charAt(0).toUpperCase() + name.slice(1);
   }
+  if (name == "wendell" || name == "Wendell") {
+    paragraph = wendellText;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+  }
   return (
     <div className={styles.container}>
       <div className={styles.card}>
