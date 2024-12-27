@@ -17,7 +17,22 @@ const caveat = Caveat({
 });
 
 export default function Home() {
-  const nameList = ["Diana", "diana", "Sam", "sam"];
+  const nameList = [
+    "Diana",
+    "diana",
+    "Sam",
+    "sam",
+    "quinn",
+    "Quinn",
+    "wendell",
+    "Wendell",
+    "Jo",
+    "jo",
+    "Raj",
+    "raj",
+    "Johnny",
+    "johnny",
+  ];
   const [name, setName] = useState<string>(""); // User's input
   const [cardName, setCardName] = useState<string | null>(null); // Name to display on the card
   const [error, setError] = useState<string | null>(null); // Error message

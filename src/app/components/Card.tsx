@@ -3,6 +3,9 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/classicStyles.module.css";
 import Pochacco from "../assets/pochacco.svg";
+import Chococat from "../assets/chocochristmas.svg";
+import KuromiChimney from "../assets/kuromichimney.svg";
+import KuromiStocking from "../assets/kuromichristmas.svg";
 
 export type CardProps = {
   name: string;
@@ -10,6 +13,7 @@ export type CardProps = {
 
 const Card = ({ name }: CardProps): React.ReactElement => {
   let paragraph = "";
+  let image = Pochacco;
   const dianaText =
     "This is the long awaited christmas card that had so many christmas \
             dinner complications get in the way of its completion lol. But it's \
@@ -32,6 +36,18 @@ const Card = ({ name }: CardProps): React.ReactElement => {
     "Merry Christmas and Happy New Year! No I am not a day late, new years has not arrived just yet. \
     It's been a chaotic year with all of you and I'm etenerally grateful to have met you and become friends.";
 
+  const quinnText =
+    "Merry Christmas and Happy New year!!! I hope you're having a wonderful holiday break full of food, hot chocolate, more food, warmth, and memorable times with loved ones. \
+    I know we just recently met but you're definitely a kind person and I always enjoy working out with you when we can. \
+    This is just my mini way of celebrating christmas with you and I hope you do like the Kuromi in a chimney decorated with colorful lights LOL \
+    I hope you enjoy the rest of your break and we'll workout soon!!";
+
+  const joText =
+    "Merry Christmas and Happy New Year!! I hope you've had a wonderful christmas Jo full of warmth and good times with your loved ones. \
+    I know this is a little late but here's my small way of celebrating christmas with you so I hope you like the e-card LOL \
+    Felt like Kuromi would be more your vibe, it was either Kuromi or Badtz-Maru but I went with Kuromi so I hope you like her a bit at least (pls). \
+    Cheers to a year of friendship with you and the rest of the bunch and to many more!";
+
   if (name == "diana" || name == "Diana") {
     paragraph = dianaText;
     name = name.charAt(0).toUpperCase() + name.slice(1);
@@ -42,25 +58,53 @@ const Card = ({ name }: CardProps): React.ReactElement => {
   }
   if (name == "wendell" || name == "Wendell") {
     paragraph = wendellText;
+    image = Chococat;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  if (name == "quinn" || name == "Quinn") {
+    paragraph = quinnText;
+    image = KuromiChimney;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  if (name == "jo" || name == "Jo") {
+    paragraph = joText;
+    image = KuromiStocking;
     name = name.charAt(0).toUpperCase() + name.slice(1);
   }
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.cardFront}>
-          <Image
-            className={styles.image}
-            src={Pochacco}
-            width={135}
-            alt="pochacco"
-          />
+          {image == Pochacco ? (
+            <Image
+              className={styles.pochacco}
+              src={image}
+              width={135}
+              alt="pochacco"
+            />
+          ) : (
+            <Image
+              className={styles.image}
+              src={image}
+              width={135}
+              alt="character"
+            />
+          )}
           <h3 className={styles.greeting}>HAPPY HOLIDAYS</h3>
         </div>
         {/* Left side (Cover of the card) */}
         <div className={styles.cardInside}>
           <p className={styles.coverText}>Hi {name},</p>
           <p className={styles.text}>{paragraph}</p>
-          <p className={styles.signature}>Love, Jenny</p>
+          {name == "Diana" ||
+          name == "Sam" ||
+          name == "Quinn" ||
+          name == "Kathy" ||
+          name == "Vitasta" ? (
+            <p className={styles.signature}>Love, Jenny</p>
+          ) : (
+            <p className={styles.signature}>- Jenny</p>
+          )}
         </div>
       </div>
     </div>

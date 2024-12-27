@@ -27,7 +27,7 @@
   font-weight: bold;
 }
 
-.image {
+.pochacco {
   margin-right: 30px;
 }
 
@@ -50,6 +50,10 @@
 }
 
 .card:hover .image {
+  visibility: hidden;
+}
+
+.card:hover .pochacco {
   visibility: hidden;
 }
 
@@ -88,6 +92,7 @@
 .coverText {
   font-family: var(--font-caveat);
   font-size: small;
+  margin-bottom: 10px;
 }
 
 .text {
