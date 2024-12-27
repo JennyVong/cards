@@ -37,7 +37,7 @@ const Card = ({ name }: CardProps): React.ReactElement => {
     I hope you had a wonderful christmas with food, more food, cats, and memorable times with loved ones. \
     Super thankful for the friendship we've built over the year and the rest of the bunch. \
     I've said it before but you make me excited for adulthood and soso grateful that you're someone I can look up to. \
-    Cheers to many more years of friendship and chaotic workouts LOL";
+    Cheers to many more years of friendship and chaotic workouts !";
 
   const quinnText =
     "Merry Christmas and Happy New year!!! I hope you're having a wonderful holiday break full of food, hot chocolate, more food, warmth, and memorable times with loved ones. \
