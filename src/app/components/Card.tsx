@@ -33,8 +33,11 @@ const Card = ({ name }: CardProps): React.ReactElement => {
       I hope you had a christmas full of food, warmth, and joyful times with loved ones that'll continue into the new year too!";
 
   const wendellText =
-    "Merry Christmas and Happy New Year! No I am not a day late, new years has not arrived just yet. \
-    It's been a chaotic year with all of you and I'm etenerally grateful to have met you and become friends.";
+    "Merry Christmas and Happy New Year! To celebrate with you kinda, I present to you, this amazing e-card. The Chococat looks like Nina a bit LOL so I thought it was perfect for you. \
+    I hope you had a wonderful christmas with food, more food, cats, and memorable times with loved ones. \
+    Super thankful for the friendship we've built over the year and the rest of the bunch. \
+    I've said it before but you make me excited for adulthood and soso grateful that you're someone I can look up to. \
+    Cheers to many more years of friendship and chaotic workouts LOL";
 
   const quinnText =
     "Merry Christmas and Happy New year!!! I hope you're having a wonderful holiday break full of food, hot chocolate, more food, warmth, and memorable times with loved ones. \
@@ -71,6 +74,7 @@ const Card = ({ name }: CardProps): React.ReactElement => {
     image = KuromiStocking;
     name = name.charAt(0).toUpperCase() + name.slice(1);
   }
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
