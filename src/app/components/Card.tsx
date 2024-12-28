@@ -6,6 +6,8 @@ import Pochacco from "../assets/pochacco.svg";
 import Chococat from "../assets/chocochristmas.svg";
 import KuromiChimney from "../assets/kuromichimney.svg";
 import KuromiStocking from "../assets/kuromichristmas.svg";
+import Pompurin from "../assets/pompurin.svg";
+import TuxedoSam from "../assets/tuxedosam.svg";
 
 export type CardProps = {
   name: string;
@@ -51,6 +53,19 @@ const Card = ({ name }: CardProps): React.ReactElement => {
     Felt like Kuromi would be more your vibe, it was either Kuromi or Badtz-Maru but I went with Kuromi so I hope you like her a bit at least (pls). \
     Cheers to a year of friendship with you and the rest of the bunch and to many more!";
 
+  const rajText =
+    "Merry Christmas and Happy New Year Raj!! I hope your holidays have been full of wamrth, food, and invaluable time spent with loved ones. \
+    I know this is a little late but this is my small way of celebrating with you so I hope \
+    you like the e-card LOL I kinda foreshadowed it a bit with the gif. This was meant to be done before christmas too \
+    but the dinners got me running all over the place. I'm so grateful for our friendship and appreciate your constant unwavering support always!! \
+    You da best Raj LOL cheers to many more years of friendship and chaotic workouts !!";
+
+  const johnnyText =
+    "Merry Christmas and Happy New Year!! I hope you had a wonderful christmas full of food and time with family Johnny! (plus gf EEEEEEEEE!!!! soso happy and excited for ya bud) \
+    LOL this card was meant to be done before christmas but I got dragged to a few family dinners before I could find the time \
+    to finish all of them. I hope you enjoy my small way of celebrating with you through this pompurin and e-card though. Always grateful \
+    for the friendship we've built and cheers to many more years along with chaotic workouts!!";
+
   if (name == "diana" || name == "Diana") {
     paragraph = dianaText;
     name = name.charAt(0).toUpperCase() + name.slice(1);
@@ -72,6 +87,16 @@ const Card = ({ name }: CardProps): React.ReactElement => {
   if (name == "jo" || name == "Jo") {
     paragraph = joText;
     image = KuromiStocking;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  if (name == "raj" || name == "Raj") {
+    paragraph = rajText;
+    image = TuxedoSam;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  if (name == "johnny" || name == "Johnny") {
+    paragraph = johnnyText;
+    image = Pompurin;
     name = name.charAt(0).toUpperCase() + name.slice(1);
   }
 
